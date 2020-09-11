@@ -2241,8 +2241,9 @@ int tile::mytile::index_read_idx_map(uchar *buf, uint idx, const uchar *key,
   DBUG_RETURN(index_read_scan(key, key_len, find_flag));
 }
 
-ha_rows tile::mytile::records_in_range(uint inx, key_range *min_key,
-                                       key_range *max_key) {
+ha_rows tile::mytile::records_in_range(uint inx, const key_range *min_key,
+                                       const key_range *max_key,
+                                       page_range *page) {
   return (ha_rows)10000;
 }
 
