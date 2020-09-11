@@ -569,7 +569,7 @@ int tile::set_field(THD *thd, Field *field, std::shared_ptr<buffer> &buff,
 
     /** UTF-8 string */
   case TILEDB_STRING_UTF8:
-    return set_string_field<uint8_t>(field, buff, i, &my_charset_utf8_bin);
+    return set_string_field<uint8_t>(field, buff, i, &my_charset_utf8mb3_bin);
 
     /** UTF-16 string */
   case TILEDB_STRING_UTF16:
