@@ -377,12 +377,6 @@ public:
                          enum ha_rkey_function find_flag) override;
 
   /**
-   * Is the primary key clustered
-   * @return true because tiledb data is storted based on dimensions and layout
-   */
-  bool primary_key_is_clustered() override { return TRUE; }
-
-  /**
    * Pushdown an index condition
    * @param keyno key number
    * @param idx_cond Condition
