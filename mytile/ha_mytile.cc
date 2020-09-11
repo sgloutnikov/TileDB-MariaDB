@@ -140,7 +140,6 @@ static int mytile_init_func(void *p) {
   DBUG_ENTER("mytile_init_func");
 
   mytile_hton = static_cast<handlerton *>(p);
-  mytile_hton->state = SHOW_OPTION_YES;
   mytile_hton->create = mytile_create_handler;
   mytile_hton->tablefile_extensions = mytile_exts;
   mytile_hton->table_options = mytile_table_option_list;
