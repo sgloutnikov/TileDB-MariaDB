@@ -477,8 +477,8 @@ public:
    * Implement initial records in range
    * Currently returns static large value
    */
-  ha_rows records_in_range(uint inx, const key_range *min_key,
-                           const key_range *max_key, page_range *page) override;
+  ha_rows records_in_range(uint inx, key_range *min_key,
+                           key_range *max_key) override;
 
   /**
    * Multi Range Read interface
