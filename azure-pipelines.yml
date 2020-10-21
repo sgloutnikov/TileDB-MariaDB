@@ -9,7 +9,7 @@ trigger:
 stages:
   - stage: CI
     variables:
-      TILEDB_VERSION: 2.1.1
+      TILEDB_VERSION: erica/ch922/windows-build
       MARIADB_VERSION: 'mariadb-10.5.0'
       ROOT_DIR: '$(Build.Repository.Localpath)\'
       BUILD_DEPS: '$(Build.Repository.Localpath)\build_deps'
