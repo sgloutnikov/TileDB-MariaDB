@@ -49,6 +49,7 @@
 #include "my_base.h"   /* ha_rows */
 #include "my_global.h" /* ulonglong */
 #include "thr_lock.h"  /* THR_LOCK, THR_LOCK_DATA */
+#include "mariadb/mariadb_version.h"
 
 #define MYSQL_SERVER 1 // required for THD class
 
@@ -433,8 +434,8 @@ public:
    * @return true because tiledb data is storted based on dimensions and layout
    */
   bool primary_key_is_clustered() override { return TRUE; }
-
 #endif
+
   /**
    * Pushdown an index condition
    * @param keyno key number
